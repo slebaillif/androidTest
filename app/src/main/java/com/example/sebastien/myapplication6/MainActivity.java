@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LayoutInflater inflater = (LayoutInflater)context.getSystemService
-                (Context.LAYOUT_INFLATER_SERVICE);
-        View rootView = inflater.inflate(R.layout.fragment1, container, false);
-        LinearLayout linearLayout = (LinearLayout) rootView.findViewWithTag("to_do_list");
+//        LayoutInflater inflater = (LayoutInflater)context.getSystemService
+//                (Context.LAYOUT_INFLATER_SERVICE);
+//        View rootView = inflater.inflate(R.layout.fragment1, container, false);
+//        LinearLayout linearLayout = (LinearLayout) rootView.findViewWithTag("to_do_list");
     }
 }
