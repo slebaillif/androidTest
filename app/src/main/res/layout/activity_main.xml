@@ -8,6 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sebastien.myapplication6.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,21 +18,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New"/>
+                    android:text="New" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hello World Seb! Oy" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Is that what you want ?" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -43,25 +49,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
+                android:id="@+id/add_to_do"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"/>
-            <AutoCompleteTextView
+                android:text="+" />
+
+            <EditText
+                android:id="@+id/add_to_do_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableBottom="#000"
-                android:text="thing to do "/>
+                android:inputType="textAutoCorrect|textMultiLine"
+                android:text="thing to do " />
 
         </LinearLayout>
         <!-- VIEW ITEMS -->
-        <ListView
-            android:tag="to_do_list"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
 
-        </ListView>
-
+            <LinearLayout
+                android:id="@+id/to_do_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
