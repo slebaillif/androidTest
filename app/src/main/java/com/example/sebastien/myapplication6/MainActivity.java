@@ -27,16 +27,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        final LinearLayout todoListLayout = (LinearLayout) findViewById(R.id.to_do_list);
-
-        Button addToDo = (Button) findViewById(R.id.add_to_do);
-        addToDo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addToDoItem(todoListLayout);
-            }
-        });
+        setContentView(R.layout.round_buttons);
+//        final LinearLayout todoListLayout = (LinearLayout) findViewById(R.id.to_do_list);
+//
+//        Button addToDo = (Button) findViewById(R.id.add_to_do);
+//        addToDo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                addToDoItem(todoListLayout);
+//            }
+//        });
     }
 
     private void addToDoItem(LinearLayout todoListLayout) {

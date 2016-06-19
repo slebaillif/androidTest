@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/top_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lego"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/second_left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hands"
+        android:background="@null"
+        android:layout_below="@id/top_button"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="64dp"
+        android:paddingTop="64dp"/>
+
+    <ImageButton
+        android:id="@+id/second_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/skate"
+        android:background="@null"
+        android:layout_below="@id/top_button"
+        android:layout_alignParentRight="true"
+        android:paddingRight="64dp"
+        android:paddingTop="64dp"/>
+
+    <ImageButton
+        android:id="@+id/third_left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/duck"
+        android:background="@null"
+        android:layout_below="@id/second_left_button"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="64dp"
+        android:paddingLeft="96dp"/>
+
+    <ImageButton
+        android:id="@+id/third_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tshirt"
+        android:background="@null"
+        android:layout_below="@id/second_right_button"
+        android:layout_alignParentRight="true"
+        android:paddingTop="64dp"
+        android:paddingRight="96dp"/>
+</RelativeLayout>
