@@ -4,19 +4,21 @@
     android:layout_height="match_parent">
 
     <ImageButton
+        android:tag="1"
         android:id="@+id/top_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/lego"
+        android:src="@drawable/dash"
         android:background="@null"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
     <ImageButton
+        android:tag="2"
         android:id="@+id/second_left_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/hands"
+        android:src="@drawable/dash"
         android:background="@null"
         android:layout_below="@id/top_button"
         android:layout_alignParentLeft="true"
@@ -24,10 +26,11 @@
         android:paddingTop="64dp"/>
 
     <ImageButton
+        android:tag="3"
         android:id="@+id/second_right_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/skate"
+        android:src="@drawable/dash"
         android:background="@null"
         android:layout_below="@id/top_button"
         android:layout_alignParentRight="true"
@@ -35,10 +38,11 @@
         android:paddingTop="64dp"/>
 
     <ImageButton
+        android:tag="4"
         android:id="@+id/third_left_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/duck"
+        android:src="@drawable/dash"
         android:background="@null"
         android:layout_below="@id/second_left_button"
         android:layout_alignParentLeft="true"
@@ -46,10 +50,11 @@
         android:paddingLeft="96dp"/>
 
     <ImageButton
+        android:tag="5"
         android:id="@+id/third_right_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/tshirt"
+        android:src="@drawable/dash"
         android:background="@null"
         android:layout_below="@id/second_right_button"
         android:layout_alignParentRight="true"
