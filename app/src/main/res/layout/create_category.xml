@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:text="Category name:"/>
     <EditText
+        android:id="@+id/category_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textAutoCorrect"
@@ -25,23 +26,55 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <ImageButton
+                android:id="@+id/ball_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ball"
                 android:background="@null"/>
             <ImageButton
+                android:id="@+id/duck_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/duck"
                 android:background="@null"
                 />
+            <ImageButton
+                android:id="@+id/hands_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hands"
+                android:background="@null"
+                />
+            <ImageButton
+                android:id="@+id/lego_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lego"
+                android:background="@null"
+                />
+            <ImageButton
+                android:id="@+id/skate_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/skate"
+                android:background="@null"
+                />
+            <ImageButton
+                android:id="@+id/tshirt_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tshirt"
+                android:background="@null"
+                />
         </LinearLayout>
     </HorizontalScrollView>
     <Button
+        android:id="@+id/ok_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OK"/>
     <Button
+        android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"/>
