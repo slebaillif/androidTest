@@ -3,6 +3,7 @@ package com.example.sebastien.myapplication6.controller;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.sebastien.myapplication6.CreateCategoryActivity;
 import com.example.sebastien.myapplication6.MainActivity;
@@ -35,12 +36,14 @@ public class CategoryScreenController {
     }
     private void updateViewFrom(List<Category> categories) {
         for (int i = 0; i < categories.size(); i++) {
-            ImageButton imagButton;
             final Category category = categories.get(i);
-            int id = activity.getResources().getIdentifier("@id/"+ category.getPosition(), null, activity.getPackageName());
-            imagButton = (ImageButton) activity.findViewById(id);
-            setIconFor(category, imagButton);
-            imagButton.setOnClickListener(new View.OnClickListener() {
+            int butonId = activity.getResources().getIdentifier("@id/"+ category.getPosition(), null, activity.getPackageName());
+            int labelId = activity.getResources().getIdentifier("@id/"+ category.getPosition()+"_name", null, activity.getPackageName());
+            ImageButton imageButton = (ImageButton) activity.findViewById(butonId);
+            TextView label = (TextView) activity.findViewById(labelId);
+            label.setText(categories.get(i).getName());
+            setIconFor(category, imageButton);
+            imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (category.getName().equals(Category.NO_CATEGORY)){

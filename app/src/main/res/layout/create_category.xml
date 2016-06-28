@@ -17,7 +17,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select icon:"/>
+        android:text="Select icon:"
+        android:paddingTop="32dp"/>
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -30,13 +31,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ball"
-                android:background="@null"/>
+                android:background="@null"
+                android:padding="1dp"/>
             <ImageButton
                 android:id="@+id/duck_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/duck"
                 android:background="@null"
+                android:padding="1dp"
                 />
             <ImageButton
                 android:id="@+id/hands_button"
@@ -44,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/hands"
                 android:background="@null"
+                android:padding="1dp"
                 />
             <ImageButton
                 android:id="@+id/lego_button"
@@ -51,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/lego"
                 android:background="@null"
+                android:padding="1dp"
                 />
             <ImageButton
                 android:id="@+id/skate_button"
@@ -58,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/skate"
                 android:background="@null"
+                android:padding="1dp"
                 />
             <ImageButton
                 android:id="@+id/tshirt_button"
@@ -65,17 +71,26 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/tshirt"
                 android:background="@null"
+                android:padding="1dp"
                 />
         </LinearLayout>
     </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="32dp">
     <Button
         android:id="@+id/ok_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OK"/>
+        android:text="OK"
+        />
     <Button
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"/>
+    </LinearLayout>
 </LinearLayout>
+

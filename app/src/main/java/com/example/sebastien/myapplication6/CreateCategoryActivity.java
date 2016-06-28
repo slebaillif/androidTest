@@ -39,6 +39,13 @@ public class CreateCategoryActivity extends AppCompatActivity {
         screenIndex = (int) extras.get("screenIndex");
         //  manage ok/cancel button listener
         Button okButtn = (Button) findViewById(R.id.ok_button);
+        Button cancel = (Button) findViewById(R.id.cancel_button);
+        final ImageButton ballButtn = (ImageButton) findViewById(R.id.ball_button);
+        final ImageButton duckButtn = (ImageButton) findViewById(R.id.duck_button);
+        final ImageButton handsButtn = (ImageButton) findViewById(R.id.hands_button);
+        final ImageButton skatButtn = (ImageButton) findViewById(R.id.skate_button);
+        final ImageButton tshirtButtn = (ImageButton) findViewById(R.id.tshirt_button);
+        final ImageButton legoButtn = (ImageButton) findViewById(R.id.lego_button);
         okButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +56,6 @@ public class CreateCategoryActivity extends AppCompatActivity {
                 finish();
             }
         });
-        Button cancel = (Button) findViewById(R.id.cancel_button);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,45 +63,75 @@ public class CreateCategoryActivity extends AppCompatActivity {
                 finish();
             }
         });
-        ImageButton ballButtn = (ImageButton) findViewById(R.id.ball_button);
         ballButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ballButtn.setBackground(getDrawable(R.drawable.borders));
+                duckButtn.setBackground(null);
+                handsButtn.setBackground(null);
+                skatButtn.setBackground(null);
+                legoButtn.setBackground(null);
+                tshirtButtn.setBackground(null);
                 chosenIcon = "ball";
             }
         });
-        ImageButton duckButtn = (ImageButton) findViewById(R.id.duck_button);
         duckButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ballButtn.setBackground(null);
+                duckButtn.setBackground(getDrawable(R.drawable.borders));
+                handsButtn.setBackground(null);
+                skatButtn.setBackground(null);
+                legoButtn.setBackground(null);
+                tshirtButtn.setBackground(null);
                 chosenIcon = "duck";
             }
         });
-        ImageButton handsButtn = (ImageButton) findViewById(R.id.hands_button);
         handsButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ballButtn.setBackground(null);
+                duckButtn.setBackground(null);
+                handsButtn.setBackground(getDrawable(R.drawable.borders));
+                skatButtn.setBackground(null);
+                legoButtn.setBackground(null);
+                tshirtButtn.setBackground(null);
                 chosenIcon = "hands";
             }
         });
-        ImageButton legoButtn = (ImageButton) findViewById(R.id.lego_button);
         legoButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ballButtn.setBackground(null);
+                duckButtn.setBackground(null);
+                handsButtn.setBackground(null);
+                skatButtn.setBackground(null);
+                legoButtn.setBackground(getDrawable(R.drawable.borders));
+                tshirtButtn.setBackground(null);
                 chosenIcon = "lego";
             }
         });
-        ImageButton skatButtn = (ImageButton) findViewById(R.id.skate_button);
         skatButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ballButtn.setBackground(null);
+                duckButtn.setBackground(null);
+                handsButtn.setBackground(null);
+                skatButtn.setBackground(getDrawable(R.drawable.borders));
+                legoButtn.setBackground(null);
+                tshirtButtn.setBackground(null);
                 chosenIcon = "skate";
             }
         });
-        ImageButton tshirtButtn = (ImageButton) findViewById(R.id.tshirt_button);
         tshirtButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ballButtn.setBackground(null);
+                duckButtn.setBackground(null);
+                handsButtn.setBackground(null);
+                skatButtn.setBackground(null);
+                legoButtn.setBackground(null);
+                tshirtButtn.setBackground(getDrawable(R.drawable.borders));
                 chosenIcon = "tshirt";
             }
         });

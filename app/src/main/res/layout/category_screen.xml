@@ -1,63 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ImageButton
-        android:tag="1"
-        android:id="@+id/top_button"
+    <LinearLayout
+        android:id="@+id/top_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dash"
-        android:background="@null"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ImageButton
-        android:tag="2"
-        android:id="@+id/second_left_button"
+        <ImageButton
+            android:id="@+id/top_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/dash"
+            android:paddingTop="32dp" />
+
+        <TextView
+            android:id="@+id/top_button_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_button"
+            android:layout_centerHorizontal="true"
+            android:text="Empty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_left_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dash"
-        android:background="@null"
-        android:layout_below="@id/top_button"
         android:layout_alignParentLeft="true"
+        android:layout_below="@id/top_layout"
+        android:gravity="center"
+        android:orientation="vertical"
         android:paddingLeft="64dp"
-        android:paddingTop="64dp"/>
+        android:paddingTop="64dp">
 
-    <ImageButton
-        android:tag="3"
-        android:id="@+id/second_right_button"
+        <ImageButton
+            android:id="@+id/second_left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/dash" />
+
+        <TextView
+            android:id="@+id/second_left_button_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_right_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dash"
-        android:background="@null"
-        android:layout_below="@id/top_button"
         android:layout_alignParentRight="true"
+        android:layout_below="@id/top_layout"
+        android:gravity="center"
+        android:orientation="vertical"
         android:paddingRight="64dp"
-        android:paddingTop="64dp"/>
+        android:paddingTop="64dp">
 
+        <ImageButton
+            android:id="@+id/second_right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_layout"
+            android:background="@null"
+            android:src="@drawable/dash" />
+        <TextView
+            android:id="@+id/second_right_button_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/second_left_layout"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="96dp"
+        android:paddingTop="64dp">
     <ImageButton
-        android:tag="4"
         android:id="@+id/third_left_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dash"
-        android:background="@null"
-        android:layout_below="@id/second_left_button"
         android:layout_alignParentLeft="true"
-        android:paddingTop="64dp"
-        android:paddingLeft="96dp"/>
-
+        android:layout_below="@id/second_left_layout"
+        android:background="@null"
+        android:src="@drawable/dash" />
+        <TextView
+            android:id="@+id/third_left_button_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/third_right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/second_right_layout"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="96dp"
+        android:paddingTop="64dp">
     <ImageButton
-        android:tag="5"
         android:id="@+id/third_right_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dash"
-        android:background="@null"
-        android:layout_below="@id/second_right_button"
         android:layout_alignParentRight="true"
-        android:paddingTop="64dp"
-        android:paddingRight="96dp"/>
+        android:layout_below="@id/second_right_layout"
+        android:background="@null"
+
+        android:src="@drawable/dash" />
+        <TextView
+            android:id="@+id/third_right_button_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty" />
+    </LinearLayout>
 </RelativeLayout>
