@@ -23,7 +23,7 @@ public class CreateCategoryActivity extends AppCompatActivity {
     private ToDoListApp toDoListApp;
     private String position;
     private Integer screenIndex;
-    private String chosenIcon = "dash";
+    private String chosenIcon = "ball";
 
 
     public CreateCategoryActivity() {
@@ -46,6 +46,7 @@ public class CreateCategoryActivity extends AppCompatActivity {
         final ImageButton skatButtn = (ImageButton) findViewById(R.id.skate_button);
         final ImageButton tshirtButtn = (ImageButton) findViewById(R.id.tshirt_button);
         final ImageButton legoButtn = (ImageButton) findViewById(R.id.lego_button);
+        ballButtn.setBackground(getDrawable(R.drawable.borders));
         okButtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

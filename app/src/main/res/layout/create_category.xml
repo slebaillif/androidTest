@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category name:"/>
+        android:text="@string/category_name"/>
     <EditText
         android:id="@+id/category_name"
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select icon:"
+        android:text="@string/select_icon"
         android:paddingTop="32dp"/>
     <HorizontalScrollView
         android:layout_width="wrap_content"
@@ -84,13 +84,13 @@
         android:id="@+id/ok_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OK"
+        android:text="@string/ok"
         />
     <Button
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel"/>
+        android:text="@string/cancel"/>
     </LinearLayout>
 </LinearLayout>
 

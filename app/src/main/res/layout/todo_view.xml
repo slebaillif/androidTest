@@ -19,8 +19,8 @@
         android:inputType="textAutoCorrect|textMultiLine"/>
 
     <ImageButton
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:background="@null"
         android:contentDescription="options"
         android:src="@drawable/options"

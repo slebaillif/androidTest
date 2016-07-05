@@ -2,10 +2,13 @@ package com.example.sebastien.myapplication6;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.sebastien.myapplication6.model.ToDoListItem;
@@ -19,7 +22,7 @@ import java.util.List;
  */
 public class ToDoListActivity extends AppCompatActivity {
     List<ToDoListItem> todoList = new ArrayList<>();
-
+    boolean expanded = true;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,31 @@ public class ToDoListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 addToDoItem(todoListLayout);
+            }
+        });
+        final ImageButton epandButton = (ImageButton) findViewById(R.id.expand_lists_button);
+        epandButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expanded){
+                    LinearLayout layout = (LinearLayout) findViewById(R.id.list_names_layout);
+                    LinearLayout listLayout = (LinearLayout) findViewById(R.id.list_layout);
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                    listLayout.setLayoutParams(params);
+                    layout.setVisibility(View.GONE);
+                    epandButton.setImageResource(R.drawable.ic_chevron_left_black_24dp);
+                    expanded = false;
+                    v.invalidate();
+                }else{
+                    LinearLayout layout = (LinearLayout) findViewById(R.id.list_names_layout);
+                    layout.setVisibility(View.VISIBLE);
+                    LinearLayout listLayout = (LinearLayout) findViewById(R.id.list_layout);
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                    listLayout.setLayoutParams(params);
+                    epandButton.setImageResource(R.drawable.ic_chevron_right_black_24dp);
+                    expanded = true;
+                    v.invalidate();
+                }
             }
         });
     }

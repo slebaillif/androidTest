@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ListMania</string>
+    <string name="new_category">New category</string>
+
+    <string name="category_name">Category name</string>
+    <string name="select_icon">Select icon</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>

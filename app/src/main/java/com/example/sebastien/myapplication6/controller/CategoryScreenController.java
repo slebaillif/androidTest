@@ -31,28 +31,33 @@ public class CategoryScreenController {
         this.updateCurrentView();
     }
 
-    public void updateCurrentView(){
+    public void updateCurrentView() {
         updateViewFrom(appModel.getCategoriesByScreen().get(currentScreenIndex));
     }
+
     private void updateViewFrom(List<Category> categories) {
         for (int i = 0; i < categories.size(); i++) {
             final Category category = categories.get(i);
-            int butonId = activity.getResources().getIdentifier("@id/"+ category.getPosition(), null, activity.getPackageName());
-            int labelId = activity.getResources().getIdentifier("@id/"+ category.getPosition()+"_name", null, activity.getPackageName());
+            int butonId = activity.getResources().getIdentifier("@id/" + category.getPosition(), null, activity.getPackageName());
+            int labelId = activity.getResources().getIdentifier("@id/" + category.getPosition() + "_name", null, activity.getPackageName());
             ImageButton imageButton = (ImageButton) activity.findViewById(butonId);
             TextView label = (TextView) activity.findViewById(labelId);
-            label.setText(categories.get(i).getName());
+            if (category.getName().equals(Category.NO_CATEGORY)) {
+                label.setText(R.string.new_category);
+            } else {
+                label.setText(categories.get(i).getName());
+            }
             setIconFor(category, imageButton);
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (category.getName().equals(Category.NO_CATEGORY)){
+                    if (category.getName().equals(Category.NO_CATEGORY)) {
                         Intent createCategory = new Intent(v.getContext(), CreateCategoryActivity.class);
                         createCategory.putExtra("toDoListApp", (Serializable) appModel);
                         createCategory.putExtra("position", category.getPosition());
-                        createCategory.putExtra("screenIndex",currentScreenIndex);
+                        createCategory.putExtra("screenIndex", currentScreenIndex);
                         activity.startActivityForResult(createCategory, CREATE_CATEGORY);
-                    }else{
+                    } else {
                         Intent viewTodoListForCategory = new Intent(v.getContext(), ToDoListActivity.class);
                         activity.startActivity(viewTodoListForCategory);
                     }
