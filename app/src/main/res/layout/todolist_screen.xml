@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,74 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimary"
     tools:context="com.example.sebastien.myapplication6.MainActivity">
-
-
-    <!-- TABS -->
-    <LinearLayout
-        android:id="@+id/list_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/category_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="List Name" />
-
-            <ImageButton
-                android:id="@+id/add_list_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_add_box_black_24dp" />
-
-            <ImageButton
-                android:id="@+id/expand_lists_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp" />
-        </LinearLayout>
-
-        <!-- EDIT ZONE -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/add_to_do"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+" />
-
-            <EditText
-                android:id="@+id/add_to_do_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textAutoCorrect|textMultiLine"
-                android:text="thing to do " />
-
-        </LinearLayout>
-        <!-- VIEW ITEMS -->
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true">
-
-            <LinearLayout
-                android:id="@+id/to_do_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
-        </ScrollView>
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/list_names_layout"
@@ -83,7 +17,9 @@
         android:layout_gravity="right"
         android:background="@color/colorPrimaryDark"
         android:orientation="vertical"
-        android:padding="0dp">
+        android:padding="0dp"
+        android:layout_alignParentRight="true"
+        >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -119,4 +55,85 @@
         </ScrollView>
 
     </LinearLayout>
-</LinearLayout>
+    <!-- TABS -->
+    <RelativeLayout
+        android:id="@+id/list_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/list_names_layout">
+
+        <RelativeLayout
+            android:id="@+id/list_name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CodeFont"
+                android:text="List Name"
+                android:gravity="left"/>
+
+            <ImageButton
+                android:id="@+id/add_list_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_box_black_24dp"
+                android:layout_toLeftOf="@+id/expand_lists_button"
+                android:gravity="right"/>
+
+            <ImageButton
+                android:id="@+id/expand_lists_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <!-- EDIT ZONE -->
+        <RelativeLayout
+            android:id="@+id/edit_zone_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/list_name_layout">
+            <Button
+                android:id="@+id/add_to_do"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:layout_alignParentRight="true"/>
+            <EditText
+                android:id="@+id/add_to_do_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoCorrect|textMultiLine"
+                android:text="thing to do "
+                android:layout_toLeftOf="@id/add_to_do"/>
+
+
+
+
+        </RelativeLayout>
+        <!-- VIEW ITEMS -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:layout_below="@id/edit_zone_layout">
+
+            <LinearLayout
+                android:id="@+id/to_do_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

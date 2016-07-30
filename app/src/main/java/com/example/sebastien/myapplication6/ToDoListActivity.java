@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.example.sebastien.myapplication6.model.ToDoListItem;
 import com.example.sebastien.myapplication6.view.ToDoItemView;
@@ -41,9 +42,9 @@ public class ToDoListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (expanded){
                     LinearLayout layout = (LinearLayout) findViewById(R.id.list_names_layout);
-                    LinearLayout listLayout = (LinearLayout) findViewById(R.id.list_layout);
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-                    listLayout.setLayoutParams(params);
+                    RelativeLayout listLayout = (RelativeLayout) findViewById(R.id.list_layout);
+                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) listLayout.getLayoutParams();
+                    params.width=ViewGroup.LayoutParams.MATCH_PARENT;
                     layout.setVisibility(View.GONE);
                     epandButton.setImageResource(R.drawable.ic_chevron_left_black_24dp);
                     expanded = false;
@@ -51,8 +52,9 @@ public class ToDoListActivity extends AppCompatActivity {
                 }else{
                     LinearLayout layout = (LinearLayout) findViewById(R.id.list_names_layout);
                     layout.setVisibility(View.VISIBLE);
-                    LinearLayout listLayout = (LinearLayout) findViewById(R.id.list_layout);
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                    RelativeLayout listLayout = (RelativeLayout) findViewById(R.id.list_layout);
+                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) listLayout.getLayoutParams();
+                    params.width=ViewGroup.LayoutParams.WRAP_CONTENT;
                     listLayout.setLayoutParams(params);
                     epandButton.setImageResource(R.drawable.ic_chevron_right_black_24dp);
                     expanded = true;
